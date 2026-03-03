@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rent the Hermès Birkin 30 Burgundy — iconic luxury handbag available through LUXE RENTALS.">
+    <title>Hermès Birkin 30 Burgundy — LUXE RENTALS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+</head>
+
+<body class="theme-page-hermes">
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo"><span class="logo-main">LUXE</span><span class="logo-sub">RENTALS</span></div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+        <p class="preloader-tagline">Loading Luxury...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">LUXE<span>RENTALS</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="vip.html">VIP</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="vip.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ====== PRODUCT DETAIL ====== -->
+    <section class="product-detail">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="fadeInUp stagger-1" style="margin-bottom:32px;font-size:0.85rem;color:var(--gray-200);">
+                <a href="index.html" style="color:var(--gray-200);">Home</a>
+                <span style="margin:0 8px;color:var(--gray-400);">›</span>
+                <a href="index.html#products" style="color:var(--gray-200);">Handbags</a>
+                <span style="margin:0 8px;color:var(--gray-400);">›</span>
+                <span style="color:var(--gold);">Birkin 30 Burgundy</span>
+            </div>
+
+            <div class="product-detail-grid">
+                <!-- Gallery -->
+                <div class="product-gallery tilt-card reveal">
+                    <img src="assets/designer-handbag.png" alt="Hermès Birkin 30 Burgundy - Main View"
+                        class="main-image" id="mainImage">
+                    <div class="thumb-row">
+                        <img src="assets/designer-handbag.png" alt="View 1" class="thumb active"
+                            onclick="changeImage(this)">
+                        <img src="assets/designer-handbag.png" alt="View 2" class="thumb" onclick="changeImage(this)">
+                        <img src="assets/gold-jewelry.png" alt="Paired Accessories" class="thumb"
+                            onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="product-details-info reveal reveal-delay-2">
+                    <span class="product-brand-label fadeInUp stagger-2">Hermès</span>
+                    <h1 class="fadeInUp stagger-3">Birkin 30 Burgundy</h1>
+                    <div class="product-rating-bar">
+                        <span class="stars">★★★★★</span>
+                        <span>5.0 (15 reviews)</span>
+                    </div>
+
+                    <div class="product-price-section">
+                        <p class="price-label">Rental Price Starting At</p>
+                        <p class="price">$450 <span>/ 4 days</span></p>
+                        <p class="retail-price">Retail Value: $12,000</p>
+                    </div>
+
+                    <p class="product-description">
+                        Iconic Birkin 30 in deep burgundy Togo leather with gold-plated hardware. A timeless investment
+                        and the ultimate symbol of luxury. This rare piece is available exclusively for our VIP members.
+                    </p>
+
+                    <!-- Duration Selector -->
+                    <div class="duration-selector">
+                        <label>Select Rental Duration</label>
+                        <div class="duration-options">
+                            <div class="duration-option" onclick="selectDuration(this)">
+                                <strong>4 Days</strong>
+                                <span class="dur-price">$450</span>
+                            </div>
+                            <div class="duration-option selected" onclick="selectDuration(this)">
+                                <strong>7 Days</strong>
+                                <span class="dur-price">$650</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calendar & Reserve remains same pattern ... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo"><a href="index.html" style="color:inherit;text-decoration:none;">LUXE<span
+                                style="color:var(--white);font-weight:400;">RENTALS</span></a></div>
+                    <p class="footer-desc">The world's premier fashion rental platform. Rent luxury designer pieces for
+                        any
+                        occasion. Sustainable fashion, elevated.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Collections -->
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="shop.html">Evening Wear</a></li>
+                        <li><a href="shop.html">Wedding & Bridal</a></li>
+                        <li><a href="shop.html">Designer Bags</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                        <li><a href="shop.html">New Arrivals</a></li>
+                        <li><a href="shop.html">Limited Edition</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="about.html#values">Sustainability</a></li>
+                        <li><a href="about.html#team">Team</a></li>
+                        <li><a href="about.html#journey">Our Journey</a></li>
+                        <li><a href="contact.html">Partner With Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-col">
+                    <h4>Support & Newsletter</h4>
+                    <ul>
+                        <li><a href="how-it-works.html#faq">FAQ</a></li>
+                        <li><a href="how-it-works.html#guarantees">Shipping & Returns</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <p style="font-size:0.8rem;color:var(--gray-200);margin-top:20px;margin-bottom:8px;">Subscribe for
+                        exclusive
+                        access:</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 LUXE RENTALS. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shop luxury fashion rentals — filter by brand, size, occasion & price. Designer dresses, tuxedos, bags & accessories at LUXE RENTALS.">
+    <title>Shop — LUXE RENTALS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+</head>
+
+<body class="theme-page-shop">
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo"><span class="logo-main">LUXE</span><span class="logo-sub">RENTALS</span></div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+        <p class="preloader-tagline">Loading Luxury...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">LUXE<span>RENTALS</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="vip.html">VIP</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="vip.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="particles-bg"></div>
+        <div class="container">
+            <p class="hero-label fadeInUp stagger-1">✦ The Catalogue</p>
+            <h1 class="hero-title fadeInUp stagger-2">Shop <span class="highlight">Luxury</span> Rentals</h1>
+            <p class="hero-description fadeInUp stagger-3">Explore our full catalogue of designer fashion. Filter by
+                brand, size, occasion,
+                or price to find your perfect piece.</p>
+            <div class="page-hero-divider fadeInUp stagger-4"></div>
+        </div>
+    </section>
+
+    <!-- SHOP LAYOUT -->
+    <div class="shop-layout container-lg">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar glass-card" style="padding:28px;">
+            <div class="filter-group">
+                <h4>Category</h4>
+                <label><input type="checkbox" checked> All Categories</label>
+                <label><input type="checkbox"> Dresses</label>
+                <label><input type="checkbox"> Suits & Tuxedos</label>
+                <label><input type="checkbox"> Handbags</label>
+                <label><input type="checkbox"> Accessories</label>
+                <label><input type="checkbox"> Bridal</label>
+            </div>
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <label><input type="checkbox"> Valentino</label>
+                <label><input type="checkbox"> Tom Ford</label>
+                <label><input type="checkbox"> Hermès</label>
+                <label><input type="checkbox"> Chanel</label>
+                <label><input type="checkbox"> Dior</label>
+                <label><input type="checkbox"> Gucci</label>
+                <label><input type="checkbox"> Vera Wang</label>
+                <label><input type="checkbox"> Cartier</label>
+            </div>
+            <div class="filter-group">
+                <h4>Size</h4>
+                <label><input type="checkbox"> XS</label>
+                <label><input type="checkbox"> S</label>
+                <label><input type="checkbox"> M</label>
+                <label><input type="checkbox"> L</label>
+                <label><input type="checkbox"> XL</label>
+            </div>
+            <div class="filter-group">
+                <h4>Occasion</h4>
+                <label><input type="checkbox"> Gala / Red Carpet</label>
+                <label><input type="checkbox"> Wedding</label>
+                <label><input type="checkbox"> Cocktail Party</label>
+                <label><input type="checkbox"> Business Formal</label>
+                <label><input type="checkbox"> Date Night</label>
+            </div>
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <div class="price-range">
+                    <input type="text" class="price-input" placeholder="$0" aria-label="Min price">
+                    <span style="color:var(--gray-300);">—</span>
+                    <input type="text" class="price-input" placeholder="$1000" aria-label="Max price">
+                </div>
+            </div>
+            <button class="btn btn-primary" style="width:100%;padding:12px;font-size:0.8rem;">Apply Filters</button>
+        </aside>
+
+        <!-- Main Grid -->
+        <main>
+            <div class="shop-main-header">
+                <p class="results-count">Showing <strong style="color:var(--white);">12</strong> of 170 results</p>
+                <select class="sort-select" aria-label="Sort by">
+                    <option>Sort by: Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest First</option>
+                    <option>Most Popular</option>
+                </select>
+            </div>
+
+            <div class="products-grid">
+                <a href="valentino-gown.html" class="product-card glass-card reveal hover-zoom tilt-card"
+                    data-category="dresses" data-brand="valentino" data-price="250">
+                    <div class="product-image-wrap">
+                        <img src="assets/evening-gown.png" alt="Valentino Crimson Gala Gown" class="product-image"
+                            loading="lazy">
+                        <span class="product-badge">New In</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Valentino</p>
+                        <h3 class="product-name">Crimson Gala Gown</h3>
+                        <p class="product-short-desc">Breathtaking floor-length silk gown in signature Valentino
+                            crimson.</p>
+                        <div class="product-meta">
+                            <p class="product-price">$285 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★★</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="tom-ford-tuxedo.html"
+                    class="product-card glass-card reveal hover-zoom tilt-card reveal-delay-1">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/tuxedo.png" alt="Tom Ford Tuxedo" class="product-image" loading="lazy">
+                        <span class="product-badge">Popular</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Tom Ford</p>
+                        <h3 class="product-name">Midnight Silk Tuxedo</h3>
+                        <p class="product-short-desc">Classic Tom Ford elegance with premium silk and expert tailoring.
+                        </p>
+                        <div class="product-meta">
+                            <p class="product-price">$320 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★★</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="hermes-birkin.html" class="product-card glass-card reveal hover-zoom tilt-card reveal-delay-2">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/designer-handbag.png" alt="Hermès Birkin" class="product-image" loading="lazy">
+                        <span class="product-badge">Exclusive</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Hermès</p>
+                        <h3 class="product-name">Birkin 30 Burgundy</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$450 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★★</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="vera-wang-bridal.html" class="product-card glass-card reveal hover-zoom tilt-card">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/couture-gown.png" alt="Vera Wang Bridal" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Vera Wang</p>
+                        <h3 class="product-name">Ivory Couture Bridal Gown</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$520 <span>/ 7 days</span></p><span
+                                class="product-rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="cartier-jewelry.html"
+                    class="product-card glass-card reveal hover-zoom tilt-card reveal-delay-1">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/gold-jewelry.png" alt="Cartier Jewelry" class="product-image" loading="lazy">
+                        <span class="product-badge">VIP Only</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Cartier</p>
+                        <h3 class="product-name">Gold Statement Set</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$380 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★★</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="dior-velvet-dress.html"
+                    class="product-card glass-card reveal hover-zoom tilt-card reveal-delay-2">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/evening-gown.png" alt="Dior Evening Dress" class="product-image"
+                            loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Dior</p>
+                        <h3 class="product-name">Noir Velvet Evening Dress</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$310 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="product-card glass-card reveal hover-zoom tilt-card">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/tuxedo.png" alt="Gucci Slim Tuxedo" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Gucci</p>
+                        <h3 class="product-name">Slim-Fit Velvet Tuxedo</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$295 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★★</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html"
+                    class="product-card glass-card reveal hover-zoom tilt-card reveal-delay-1">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/designer-handbag.png" alt="Chanel Classic Flap" class="product-image"
+                            loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Chanel</p>
+                        <h3 class="product-name">Classic Flap Medium</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$420 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★★</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="product-card glass-card reveal reveal-delay-2">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/couture-gown.png" alt="Elie Saab Gown" class="product-image" loading="lazy">
+                        <span class="product-badge">New In</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Elie Saab</p>
+                        <h3 class="product-name">Enchanted Lace Gown</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$475 <span>/ 7 days</span></p><span
+                                class="product-rating">★★★★★</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="product-card glass-card reveal hover-zoom tilt-card">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/gold-jewelry.png" alt="Bulgari Earrings" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Bulgari</p>
+                        <h3 class="product-name">Serpenti Drop Earrings</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$250 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html"
+                    class="product-card glass-card reveal hover-zoom tilt-card reveal-delay-1">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/evening-gown.png" alt="Versace Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Popular</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Versace</p>
+                        <h3 class="product-name">Medusa Pin Column Dress</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$340 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★★</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="product-detail.html"
+                    class="product-card glass-card reveal hover-zoom tilt-card reveal-delay-2">
+                    <div class="product-image-wrap hover-zoom-plus">
+                        <img src="assets/designer-handbag.png" alt="Prada Bag" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-brand">Prada</p>
+                        <h3 class="product-name">Re-Edition Nylon Bag</h3>
+                        <div class="product-meta">
+                            <p class="product-price">$195 <span>/ 4 days</span></p><span
+                                class="product-rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="load-more reveal">
+                <button class="btn btn-outline">Load More Pieces</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- NEWSLETTER CTA -->
+    <section class="shop-newsletter">
+        <div class="shop-newsletter-inner glass-card reveal">
+            <h3>Never Miss a <span class="highlight">Drop</span></h3>
+            <p>Subscribe to get notified about new arrivals, limited editions, and exclusive member offers.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();"><input type="email"
+                    placeholder="Your email address" aria-label="Email"><button type="submit">Subscribe</button></form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo"><a href="index.html" style="color:inherit;text-decoration:none;">LUXE<span
+                                style="color:var(--white);font-weight:400;">RENTALS</span></a></div>
+                    <p class="footer-desc">The world's premier fashion rental platform. Rent luxury designer pieces for
+                        any
+                        occasion. Sustainable fashion, elevated.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Collections -->
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="shop.html">Evening Wear</a></li>
+                        <li><a href="shop.html">Wedding & Bridal</a></li>
+                        <li><a href="shop.html">Designer Bags</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                        <li><a href="shop.html">New Arrivals</a></li>
+                        <li><a href="shop.html">Limited Edition</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="about.html#values">Sustainability</a></li>
+                        <li><a href="about.html#team">Team</a></li>
+                        <li><a href="about.html#journey">Our Journey</a></li>
+                        <li><a href="contact.html">Partner With Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-col">
+                    <h4>Support & Newsletter</h4>
+                    <ul>
+                        <li><a href="how-it-works.html#faq">FAQ</a></li>
+                        <li><a href="how-it-works.html#guarantees">Shipping & Returns</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <p style="font-size:0.8rem;color:var(--gray-200);margin-top:20px;margin-bottom:8px;">Subscribe for
+                        exclusive
+                        access:</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 LUXE RENTALS. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
+</body>
+
+</html>

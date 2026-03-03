@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LUXE RENTALS 3D Virtual Fitting Room — Try on designer dresses, jewelry and accessories on a 3D avatar before you rent.">
+    <title>LUXE RENTALS — 3D Virtual Fitting Room</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fitting-room.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+</head>
+
+<body class="theme-page-fitting">
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo"><span class="logo-main">LUXE</span><span class="logo-sub">RENTALS</span></div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+        <p class="preloader-tagline">Preparing Your Fitting Room...</p>
+    </div>
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">LUXE<span>RENTALS</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="fitting-room.html" class="active">3D Try-On</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="vip.html">VIP</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="vip.html" class="btn btn-primary nav-cta">Join Now</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- PAGE HERO STRIP -->
+    <div class="fr-hero-strip">
+        <span class="section-label">✦ Immersive 3D Experience</span>
+        <h1 class="fr-hero-title">Virtual <span class="highlight">Fitting Room</span></h1>
+        <p class="fr-hero-sub">Select any dress or jewel — watch it appear on your avatar in real time.</p>
+    </div>
+
+    <!-- MAIN FITTING ROOM LAYOUT -->
+    <main class="fr-main" id="frMain">
+
+        <!-- LEFT PANEL: Item Selector -->
+        <aside class="fr-selector" id="frSelector">
+            <div class="fr-tabs" role="tablist">
+                <button class="fr-tab active" data-tab="dresses" role="tab" aria-selected="true">👗 Dresses</button>
+                <button class="fr-tab" data-tab="jewelry" role="tab" aria-selected="false">💎 Jewelry</button>
+            </div>
+
+            <!-- DRESSES -->
+            <div class="fr-items-panel active" id="tab-dresses">
+                <div class="fr-category-label">Gowns &amp; Couture</div>
+                <div class="fr-items-grid">
+                    <div class="fr-item" data-type="dress" data-id="crimson-gown" data-color="#8B0000"
+                        data-label="Crimson Gala Gown" data-brand="Valentino" data-price="$285/4 days" data-emoji="🔴">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#8B0000,#4B0082)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Valentino</p>
+                            <p class="fr-item-name">Crimson Gala Gown</p>
+                        </div>
+                        <span class="fr-item-price">$285</span>
+                    </div>
+                    <div class="fr-item" data-type="dress" data-id="ivory-bridal" data-color="#F5F0E8"
+                        data-label="Ivory Couture Bridal" data-brand="Vera Wang" data-price="$520/7 days"
+                        data-emoji="⚪">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#F5F0E8,#C8B99A)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Vera Wang</p>
+                            <p class="fr-item-name">Ivory Couture Bridal</p>
+                        </div>
+                        <span class="fr-item-price">$520</span>
+                    </div>
+                    <div class="fr-item" data-type="dress" data-id="noir-velvet" data-color="#1a1a2e"
+                        data-label="Noir Velvet Dress" data-brand="Dior" data-price="$310/4 days" data-emoji="⚫">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#1a1a2e,#4a0072)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Dior</p>
+                            <p class="fr-item-name">Noir Velvet Dress</p>
+                        </div>
+                        <span class="fr-item-price">$310</span>
+                    </div>
+                    <div class="fr-item" data-type="dress" data-id="midnight-tux" data-color="#0a0a2a"
+                        data-label="Midnight Silk Tuxedo" data-brand="Tom Ford" data-price="$320/4 days"
+                        data-emoji="🔵">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#0d1b4b,#1e3a7b)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Tom Ford</p>
+                            <p class="fr-item-name">Midnight Silk Tuxedo</p>
+                        </div>
+                        <span class="fr-item-price">$320</span>
+                    </div>
+                    <div class="fr-item" data-type="dress" data-id="rose-ethnic" data-color="#c0392b"
+                        data-label="Rose Ethnic Saree" data-brand="Sabyasachi" data-price="$180/3 days" data-emoji="🌹">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#c0392b,#922b21)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Sabyasachi</p>
+                            <p class="fr-item-name">Rose Ethnic Saree</p>
+                        </div>
+                        <span class="fr-item-price">$180</span>
+                    </div>
+                    <div class="fr-item" data-type="dress" data-id="emerald-gown" data-color="#0d5016"
+                        data-label="Emerald Couture Gown" data-brand="Gucci" data-price="$420/4 days" data-emoji="🟢">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#0d5016,#1a7a28)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Gucci</p>
+                            <p class="fr-item-name">Emerald Couture Gown</p>
+                        </div>
+                        <span class="fr-item-price">$420</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JEWELRY -->
+            <div class="fr-items-panel" id="tab-jewelry">
+                <div class="fr-category-label">Fine Jewelry</div>
+                <div class="fr-items-grid">
+                    <div class="fr-item" data-type="necklace" data-id="gold-necklace" data-color="#FFD700"
+                        data-label="Gold Diamond Pendant" data-brand="Cartier" data-price="$380/4 days" data-emoji="✨">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#FFD700,#B8860B)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Cartier</p>
+                            <p class="fr-item-name">Gold Diamond Pendant</p>
+                        </div>
+                        <span class="fr-item-price">$380</span>
+                    </div>
+                    <div class="fr-item" data-type="necklace" data-id="ruby-necklace" data-color="#9B2335"
+                        data-label="Ruby Choker Set" data-brand="Bulgari" data-price="$450/4 days" data-emoji="❤️">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#9B2335,#6d1826)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Bulgari</p>
+                            <p class="fr-item-name">Ruby Choker Set</p>
+                        </div>
+                        <span class="fr-item-price">$450</span>
+                    </div>
+                    <div class="fr-item" data-type="earrings" data-id="pearl-earrings" data-color="#F0EAD6"
+                        data-label="Pearl Drop Earrings" data-brand="Mikimoto" data-price="$220/4 days" data-emoji="🤍">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#F0EAD6,#D4C5A9)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Mikimoto</p>
+                            <p class="fr-item-name">Pearl Drop Earrings</p>
+                        </div>
+                        <span class="fr-item-price">$220</span>
+                    </div>
+                    <div class="fr-item" data-type="bangles" data-id="gold-bangles" data-color="#DAA520"
+                        data-label="22K Gold Bangles" data-brand="Tanishq" data-price="$150/3 days" data-emoji="🔆">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#DAA520,#B8860B)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Tanishq</p>
+                            <p class="fr-item-name">22K Gold Bangles</p>
+                        </div>
+                        <span class="fr-item-price">$150</span>
+                    </div>
+                    <div class="fr-item" data-type="earrings" data-id="diamond-drops" data-color="#b9f2ff"
+                        data-label="Diamond Drop Earrings" data-brand="Tiffany" data-price="$520/4 days"
+                        data-emoji="💠">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#b9f2ff,#81c4d8)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Tiffany</p>
+                            <p class="fr-item-name">Diamond Drop Earrings</p>
+                        </div>
+                        <span class="fr-item-price">$520</span>
+                    </div>
+                    <div class="fr-item" data-type="necklace" data-id="sapphire-set" data-color="#0F52BA"
+                        data-label="Sapphire Statement Set" data-brand="Harry Winston" data-price="$680/4 days"
+                        data-emoji="💙">
+                        <div class="fr-item-swatch" style="background:linear-gradient(135deg,#0F52BA,#082b6e)"></div>
+                        <div class="fr-item-info">
+                            <p class="fr-item-brand">Harry Winston</p>
+                            <p class="fr-item-name">Sapphire Statement Set</p>
+                        </div>
+                        <span class="fr-item-price">$680</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CENTER: 3D AVATAR STAGE -->
+        <section class="fr-stage" id="frStage">
+            <!-- Avatar Type Toggle -->
+            <div class="fr-avatar-toggle">
+                <button class="fr-avatar-btn active" id="btnFemale" data-gender="female">
+                    <span class="avatar-icon">♀</span> Female
+                </button>
+                <button class="fr-avatar-btn" id="btnMale" data-gender="male">
+                    <span class="avatar-icon">♂</span> Male
+                </button>
+            </div>
+
+            <!-- 3D Canvas -->
+            <canvas id="avatarCanvas"></canvas>
+
+            <!-- Canvas overlay hints -->
+            <div class="fr-canvas-hint" id="canvasHint">
+                <span>🖱 Drag to Rotate &nbsp;|&nbsp; Scroll to Zoom</span>
+            </div>
+
+            <!-- Camera Controls -->
+            <div class="fr-cam-controls">
+                <button class="fr-cam-btn" id="btnReset" title="Reset View">↺</button>
+                <button class="fr-cam-btn" id="btnZoomIn" title="Zoom In">+</button>
+                <button class="fr-cam-btn" id="btnZoomOut" title="Zoom Out">−</button>
+            </div>
+
+            <!-- Outfit change animation overlay -->
+            <div class="fr-outfit-flash" id="outfitFlash"></div>
+        </section>
+
+        <!-- RIGHT PANEL: Summary + CTA -->
+        <aside class="fr-summary" id="frSummary">
+            <h3 class="fr-summary-title">Your Look</h3>
+
+            <div class="fr-summary-section">
+                <p class="fr-summary-label">Avatar</p>
+                <div class="fr-summary-value" id="summaryAvatar">
+                    <span class="fr-summary-icon">♀</span> Female
+                </div>
+            </div>
+
+            <div class="fr-summary-section">
+                <p class="fr-summary-label">Dress / Outfit</p>
+                <div class="fr-summary-slot" id="summaryDress">
+                    <span class="fr-summary-empty">No dress selected</span>
+                </div>
+            </div>
+
+            <div class="fr-summary-section">
+                <p class="fr-summary-label">Necklace</p>
+                <div class="fr-summary-slot" id="summaryNecklace">
+                    <span class="fr-summary-empty">None selected</span>
+                </div>
+            </div>
+
+            <div class="fr-summary-section">
+                <p class="fr-summary-label">Earrings</p>
+                <div class="fr-summary-slot" id="summaryEarrings">
+                    <span class="fr-summary-empty">None selected</span>
+                </div>
+            </div>
+
+            <div class="fr-summary-section">
+                <p class="fr-summary-label">Bangles</p>
+                <div class="fr-summary-slot" id="summaryBangles">
+                    <span class="fr-summary-empty">None selected</span>
+                </div>
+            </div>
+
+            <div class="fr-summary-total" id="summaryTotal" style="display:none">
+                <span>Total</span>
+                <strong id="summaryTotalAmt">$0</strong>
+            </div>
+
+            <button class="btn btn-primary fr-cta" id="btnCustomize">✦ Customize Order</button>
+            <button class="btn btn-outline fr-clear-btn" id="btnClearAll">Clear All</button>
+        </aside>
+    </main>
+
+    <!-- MOBILE BOTTOM SHEET -->
+    <div class="fr-bottomsheet" id="frBottomSheet">
+        <div class="fr-bottomsheet-handle"></div>
+        <div class="fr-bottomsheet-inner" id="frBottomSheetInner"></div>
+    </div>
+    <div class="fr-bottomsheet-open-btn" id="frBottomSheetBtn">
+        <span>👗 Select Outfit</span>
+        <span class="fr-bs-arrow">▲</span>
+    </div>
+
+    <!-- ORDER CONFIRMATION MODAL -->
+    <div class="fr-modal-overlay" id="frModalOverlay">
+        <div class="fr-modal glass-card" id="frModal">
+            <button class="fr-modal-close" id="frModalClose">✕</button>
+            <div class="fr-modal-icon">✦</div>
+            <h2 class="fr-modal-title">Order Customized</h2>
+            <p class="fr-modal-sub">Your bespoke rental selection has been prepared.</p>
+            <div class="fr-modal-summary" id="frModalSummary"></div>
+            <div class="fr-modal-confetti" id="frModalConfetti"></div>
+            <button class="btn btn-primary fr-modal-cta" id="frModalCTA">Proceed to Checkout →</button>
+            <button class="btn btn-outline fr-modal-back" id="frModalBack">Continue Shopping</button>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo"><a href="index.html" style="color:inherit;text-decoration:none;">LUXE<span
+                                style="color:var(--white);font-weight:400;">RENTALS</span></a></div>
+                    <p class="footer-desc">The world's premier fashion rental platform. Rent luxury designer pieces for
+                        any occasion. Sustainable fashion, elevated.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Collections -->
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="shop.html">Evening Wear</a></li>
+                        <li><a href="shop.html">Wedding &amp; Bridal</a></li>
+                        <li><a href="shop.html">Designer Bags</a></li>
+                        <li><a href="shop.html">Accessories</a></li>
+                        <li><a href="shop.html">New Arrivals</a></li>
+                        <li><a href="fitting-room.html">✦ 3D Try-On</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="about.html#values">Sustainability</a></li>
+                        <li><a href="about.html#team">Team</a></li>
+                        <li><a href="about.html#journey">Our Journey</a></li>
+                        <li><a href="contact.html">Partner With Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support & Newsletter -->
+                <div class="footer-col">
+                    <h4>Support &amp; Newsletter</h4>
+                    <ul>
+                        <li><a href="how-it-works.html#faq">FAQ</a></li>
+                        <li><a href="how-it-works.html#guarantees">Shipping &amp; Returns</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <p style="font-size:0.8rem;color:var(--gray-200);margin-top:20px;margin-bottom:8px;">Subscribe for
+                        exclusive access:</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 LUXE RENTALS. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- THREE.JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Modular JS -->
+    <script src="fitting-room-avatar.js"></script>
+    <script src="fitting-room-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
